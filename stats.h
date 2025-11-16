@@ -19,6 +19,8 @@ void modificarPercepcion(int n);
 void modificarSigilo(int n);
 void modificarSuerte(int n);
 
+int chequeoProbabilidad(int dificultad);
+
 void mostrarStats();
 
 #endif

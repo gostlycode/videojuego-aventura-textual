@@ -12,7 +12,7 @@ int sigilo = 2;
 int suerte = 1;
 
 
-// ======== IMPLEMENTACIÓN DE FUNCIONES ========
+//---------------------ModificacionDineroVida----------------
 
 // Vida y dinero
 void modificarVida(int n) {
@@ -25,14 +25,34 @@ void modificarDinero(int n) {
 }
 
 
-// Stats individuales
+//---------------------ModificacionStats----------------
+
 void modificarCarisma(int n) { carisma += n; }
 void modificarPercepcion(int n) { percepcion += n; }
 void modificarSigilo(int n) { sigilo += n; }
 void modificarSuerte(int n) { suerte += n; }
 
+//---------------------Probabilidad----------------
 
-// Mostrar stats (debug y utilidad in-game)
+int chequeoProbabilidad(int dificultad) {
+
+    int modificadorBase = suerte * 15;
+    int tirada = (rand() % 100) + 1;
+
+    // Multiplicadores del inventario
+    float mSuerte = obtenerMultiplicadorTotalSuerte();
+
+    int resultadoFinal = tirada + modificadorBase;
+    resultadoFinal *= mSuerte; // se vuelve más fuerte con objetos
+
+    if (resultadoFinal >= dificultad)
+        return 1;
+    else
+        return 0;
+}
+
+//---------------------MostrarStats----------------
+
 void mostrarStats() {
     printf("\n╔══════════════════════════╗\n");
     printf("║     ESTADÍSTICAS         ║\n");
