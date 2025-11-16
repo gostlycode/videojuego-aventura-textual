@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include "inventario.h"
 #include "stats.h"
 
 // ======== DEFINICIÓN DE VARIABLES GLOBALES ========
