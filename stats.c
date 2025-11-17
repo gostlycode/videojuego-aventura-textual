@@ -56,15 +56,20 @@ int chequeoProbabilidad(int dificultad) {
 //---------------------MostrarStats----------------
 
 void mostrarStats() {
+    system("cls");
     printf("\n╔══════════════════════════╗\n");
     printf("║     ESTADÍSTICAS         ║\n");
     printf("╠══════════════════════════╣\n");
-    printf("║ Vida:       %d            ║\n", vida);
-    printf("║ Dinero:     %d            ║\n", dinero);
-    printf("║ Carisma:    %d            ║\n", carisma);
-    printf("║ Percepción: %d            ║\n", percepcion);
-    printf("║ Sigilo:     %d            ║\n", sigilo);
-    printf("║ Suerte:     %d            ║\n", suerte);
+    printf("║ Vida:        %-12d║\n", vida);
+    printf("║ Dinero:      %-12d║\n", dinero);
+    printf("║ Carisma:     %-12d║\n", carisma);
+    printf("║ Percepción:  %-12d║\n", percepcion);
+    printf("║ Sigilo:      %-12d║\n", sigilo);
+    printf("║ Suerte:      %-12d║\n", suerte);
     printf("╚══════════════════════════╝\n\n");
+    printf("\nPresiona Enter para volver al menú...");
+getchar();
+getchar(); // evita que el salto anterior se consuma
 }
+
 

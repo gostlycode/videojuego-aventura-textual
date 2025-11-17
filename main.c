@@ -2,6 +2,7 @@
 #include <time.h>
 #include <stdlib.h>
 #include "menu.h"
+#include "inventario.h"
 
 int main() {
     system("chcp 65001 > nul");   // Cambia a UTF-8 sin mostrar texto

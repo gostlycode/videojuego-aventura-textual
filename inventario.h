@@ -26,4 +26,8 @@ float obtenerMultiplicadorTotalSigilo();
 int tieneObjetoQueDesbloquea();  
 void mostrarInventario();
 
+void imprimirFilaInventario(const char *nombre);
+void imprimirFilaObjeto(const char *nombre);
+
+
 #endif
